@@ -65,23 +65,15 @@ class ApplicationController < Sinatra::Base
     redirect "/"
   end
   
-  post '/withdrawal' do
-  end
+  # get '/edit' do
+  #   @user = user.find(params[:user_id])
+  #   erb :edit
+  # end
   
-  post '/deposit' do
-      
-  end
-  
-  
-  get '/edit' do
-    @user = user.find(params[:user_id])
-    erb :edit
-  end
-  
-  patch '/edit' do
-    User.update(params[:user_id], params[:balance])
-    redirect "/articles/#{id}"
-  end
+  # patch '/edit' do
+  #   User.update(params[:user_id], params[:balance])
+  #   redirect "/articles/#{id}"
+  # end
   
   helpers do
     def logged_in?
